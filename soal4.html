@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Nomor 4</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+select, input[type="submit"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+select:focus, input[type="submit"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+img {
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+</style>
+
+  
+</head>
+<body>
+    <div class="container">
+        <h2>Ubah Gambar dan Opacity</h2>
+
+        <select id="imageSelect">
+            <option value="kucing.jpg">Gambar 1</option>
+            <option value="putihoren.jpg">Gambar 2</option>
+            <option value="putih.jpg">Gambar 3</option>
+        </select>
+        
+        <select id="opacitySelect">
+            <option value="1">1</option>
+            <option value="0.5">0.5</option>
+            <option value="0.2">0.2</option>
+        </select>
+        
+        <input type="submit" value="Ubah" onclick="changeImageAndOpacity()">
+        
+        <br><br>
+        
+        <img id="imageDisplay" src="kucing.jpg" alt="Selected Image" style="opacity: 1; width: 300px;">
+        
+        <script>
+            function changeImageAndOpacity() {
+                var imageSelect = document.getElementById("imageSelect");
+                var opacitySelect = document.getElementById("opacitySelect");
+                var imageDisplay = document.getElementById("imageDisplay");
+                
+               
+                var selectedImage = imageSelect.value;
+                var selectedOpacity = opacitySelect.value;
+                
+                
+                imageDisplay.src = selectedImage;
+                imageDisplay.style.opacity = selectedOpacity;
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button Soal Nomer 3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .toggle-wrapper {
+            position: relative;
+            display: flex;
+            width: 50px;
+            height: 25px;
+        }
+
+        .toggle-label {
+            position: absolute;
+            cursor: pointer;
+            background-color: #ffffff;
+            border-radius: 25px;
+            width: 100%;
+            height: 100%;
+            transition: background-color 0.9s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .toggle-label:before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            width: 17px;
+            height: 17px;
+            background-color: rgb(174, 82, 82);
+            border-radius: 50%;
+            transition: transform 0.9s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #482e4b;
+        }
+
+        .toggle-checkbox:checked + .toggle-label:before {
+            transform: translateX(25px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toggle-wrapper">
+        <input type="checkbox" id="toggle" class="toggle-checkbox">
+        <label for="toggle" class="toggle-label"></label>
+    </div>
+</body>
+
+</html>
